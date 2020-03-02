@@ -15,8 +15,7 @@ router.get('/country', function(req, res, next) {
 /* /country:country */
 router.get("/country/:country", function(req, res, next) {  // route with country name
   worldControllers.retrieveCountry(req, res, next);  // get data from
-  res.render
-  ('chosenCountry', { title: 'Chosen Country' });
+  res.render('chosenCountry', { title: 'Chosen Country' });
 });
 
 module.exports = router;

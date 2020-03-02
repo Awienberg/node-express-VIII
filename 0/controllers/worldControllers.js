@@ -4,7 +4,13 @@ module.exports = {
         const mongo = require('mongodb');
         const dbname = "world";
         const constr = `mongodb://localhost:27017`;
-        let query = {navn: req.params.country}
+        let query = {
+            navn: req.params.country,
+            kontinent: req.params.country,
+            areal: req.params.country,
+            befolkningstal: req.params.country,
+            styreform: req.params.country
+        }
         mongo.connect(constr, { useNewUrlParser: true, useUnifiedTopology: true}, function (error, con) {
             if (error) {
                 throw error;
